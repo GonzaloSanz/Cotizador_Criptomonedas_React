@@ -3,6 +3,7 @@ import { CryptoCurrenciesResponseSchema, CryptoPriceSchema } from "../schemas/cr
 import { Pair } from "../types";
 
 export const getCryptos = async () => {
+    // API https://min-api.cryptocompare.com/
     const url = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=20&tsym=USD`;
 
     const { data: { Data } } = await axios(url);
